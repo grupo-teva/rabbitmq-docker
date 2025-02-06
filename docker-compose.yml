@@ -1,0 +1,15 @@
+version: "3.9"
+
+services: 
+  rabbit:
+    build: .
+    image: rabbit
+    container_name: rabbit
+    restart: always
+    ports:
+      - "61613:61613" 
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=tevadm
+      - RABBITMQ_DEFAULT_PASS=9qLoyMDVbqpfiRkhSENz
